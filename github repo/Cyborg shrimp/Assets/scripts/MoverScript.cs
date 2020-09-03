@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoverScript : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 6f;
     public float x, y, z;
     // Start is called before the first frame update
     void Start()
