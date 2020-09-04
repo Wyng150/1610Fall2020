@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CharacterMover : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+
+public float speed = 7f;
+
+public int score = 100;
+        // Update is called once per frame
+    private void Update()
     {
-        
+        transform.Translate(speed*Time.deltaTime ,0,0);
     }
 }
