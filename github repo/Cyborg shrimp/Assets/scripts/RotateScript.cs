@@ -5,12 +5,17 @@ using UnityEngine.Serialization;
 public class RotateScript : MonoBehaviour
 {
     public float speed = 5f;
-
-    [FormerlySerializedAs("RotationVector3")]
+    public int count;
     public Vector3 rotationVector3;
 
-    private void Update()
-    {
+    public string password;
+
+        private void Update()
+        {
+            if (password == "OU812") ;
+        {
+            print("password correct");
+        }
         rotationVector3.y = speed * Time.deltaTime;
         transform.Rotate(rotationVector3);
 
