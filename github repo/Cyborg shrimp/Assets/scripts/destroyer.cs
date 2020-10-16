@@ -1,0 +1,16 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class destroyer : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void S
+}
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
