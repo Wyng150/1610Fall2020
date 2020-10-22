@@ -1,19 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TransformScript : MonoBehaviour
 {
-    public float speed = 10f;
-    public int count;
-    public Vector3 RotationVector3;
-    public string password;
-    private void Update()
-    
+    public float moveSpeed;
+    private Vector3 _moveDirection;
+
+    public TransformScript(Vector3 moveDirection)
     {
-        if (password == "frank")
+        _moveDirection = moveDirection;
+    }
+
+    public void Update()
+    {
+        if (Input.GetButton("Jump"))
         {
-            print("correct");
+            _moveDirection.x = moveSpeed * Time.deltaTime;
+                    transform.Translate(_moveDirection);
         }
-        RotationVector3.y = speed = Time.deltaTime;
-        transform.Rotate(RotationVector3);
+        else
+        {
+            _moveDirection.x = -moveSpeed * Time.deltaTime;
+            transform.Translate(_moveDirection);
+        }
+        
     }
 }
